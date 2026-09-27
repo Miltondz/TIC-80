@@ -1,0 +1,30 @@
+-- ===========================================================================
+-- cumbre santa ana - versión tic-80
+-- ===========================================================================
+-- este es el mismo juego que la versión pico-8 del proyecto, portado a
+-- tic-80: un plataformero de ascenso vertical corto por el cerro santa ana
+-- (paraguaná, venezuela), con la subida en familia como capa narrativa.
+--
+-- es un proyecto de aprendizaje: el código está comentado para leerse como
+-- una guía. se prioriza la claridad sobre el golf de código.
+--
+-- -- mapa del código ------------------------------------------------------
+--   01_config.lua       compatibilidad tic-80/pico-8 + constantes
+--   02_jugador.lua      tabla player: input, física y colisiones
+--   03_plataformas.lua  tipos de plataforma + temporizador de rotura
+--   04_hazards.lua      cardones (knockback) y muerte por caída
+--   05_viento.lua       ráfagas en el aire + hojas indicadoras
+--   06_niebla.lua       el círculo de visión de la cima
+--   07_siluetas.lua     las siluetas de la familia
+--   08_fondo.lua        cielo, colinas con parallax, panorama final
+--   09_datos_nivel.lua  el nivel entero como lista legible
+--   10_estados.lua      máquina de estados: menu/zonas/final
+--   11_main.lua         TIC()/BOOT y utilidades
+--
+-- -- diferencias con la versión pico-8 ------------------------------------
+--   * pantalla: 240x136 (pico-8: 128x128) -> el nivel es más ancho, con
+--     zigzag de 3 columnas en lugar de 2 (¡mismo tipo de saltos!)
+--   * api: tic-80 no tiene camera() ni pal(); hay una capa de
+--     compatibilidad en 01_config.lua para que el resto se lea igual
+--   * controles: izqder mover, y A/B (botones 4/5) para saltar y confirmar
+-- ===========================================================================
